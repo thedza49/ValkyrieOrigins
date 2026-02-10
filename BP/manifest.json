@@ -1,0 +1,24 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "Valkyrie Origins BP",
+        "description": "Adds the Valkyrie Origin to the game.",
+        "uuid": "4b20a9cd-340b-4635-9347-6c5ec8c25e5d",
+        "version": [1, 0, 0],
+        "min_engine_version": [1, 20, 0]
+    },
+    "modules": [
+        {
+            "type": "data",
+            "uuid": "9c069cad-b8e2-4ae0-ba45-9e14eba89790",
+            "version": [1, 0, 0]
+        }
+    ],
+    "dependencies": [
+        {
+            "uuid": "86f39ade-e486-48ca-9459-69e05efde87c",
+            "version": [1, 0, 0]
+        }
+    ],
+    "capabilities": ["script_v1_beta"]
+}
