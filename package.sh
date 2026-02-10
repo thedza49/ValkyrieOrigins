@@ -1,7 +1,7 @@
 #!/bin/bash
 # Package the Valkyrie Origins Add-on
 
-PACKAGE_NAME="ValkyrieOrigins-v1.2.mcaddon"
+PACKAGE_NAME="ValkyrieOrigins-v1.3.mcaddon"
 PROJECT_DIR="/home/daniel/.openclaw/workspace/ValkyrieOrigins"
 
 echo "Starting package creation for $PACKAGE_NAME..."
