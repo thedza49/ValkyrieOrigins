@@ -2,7 +2,6 @@ import { world, system } from '@minecraft/server';
 import { valkyrie } from './valkyrie.js';
 import { checkCavePhobia } from './cavePhobiaPower.js';
 
-// Track cooldowns and state per player
 const playerStates = new Map();
 
 function getPlayerState(player) {
@@ -23,23 +22,23 @@ system.runInterval(() => {
         const state = getPlayerState(player);
         const onGround = player.isOnGround;
         
-        // 1. CAVE PHOBIA
         checkCavePhobia(player);
 
-        // 2. LEAP LOGIC (v1.3 RELIABLE TRIGGER)
-        // Trigger: SNEAKING while in the air
-        if (player.isSneaking && !onGround && state.leapCooldown <= 0) {
+        // 2. LEAP LOGIC (v1.4 LOOK UP & JUMP)
+        // Trigger: Jumping while looking upward (pitch < -40)
+        if (player.isJumping && player.getRotation().x < -40 && state.leapCooldown <= 0) {
             const viewDir = player.getViewDirection();
-            // Upward and forward impulse
+            
+            // Strong upward launch
             player.applyImpulse({
-                x: viewDir.x * 0.7,
-                y: 0.9, 
-                z: viewDir.z * 0.7
+                x: viewDir.x * 0.6,
+                y: 1.0, 
+                z: viewDir.z * 0.6
             });
             
             state.leapCooldown = 100; // 5 seconds
             state.isGliding = true;
-            player.onScreenDisplay.setActionBar("§l§cVALKYRIE LEAP!§r");
+            player.onScreenDisplay.setActionBar("§l§cASCENDING!§r");
         }
 
         // 3. GLIDE LOGIC
@@ -59,5 +58,6 @@ system.runInterval(() => {
 
 world.afterEvents.playerSpawn.subscribe((event) => {
     const { player } = event;
-    player.sendMessage("§l§c[Valkyrie Origins]§r §7V1.3 Active. Sneak while jumping to Leap!§r");
+    player.sendMessage("§l§c[Valkyrie Origins]§r §7V1.4: Look UP and Jump to Ascend!§r");
+    player.sendMessage("§e(Note: Ensure 'Beta APIs' is ON in world settings)§r");
 });
