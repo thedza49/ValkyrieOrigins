@@ -1,8 +1,7 @@
 #!/bin/bash
 # Package the Valkyrie Origins Add-on
 
-# FIX: Versioned filename
-PACKAGE_NAME="ValkyrieOrigins-v1.1.mcaddon"
+PACKAGE_NAME="ValkyrieOrigins-v1.2.mcaddon"
 PROJECT_DIR="/home/daniel/.openclaw/workspace/ValkyrieOrigins"
 
 echo "Starting package creation for $PACKAGE_NAME..."
