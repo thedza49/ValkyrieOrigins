@@ -1,15 +1,14 @@
 #!/bin/bash
 # Package the Valkyrie Origins Add-on
 
-PACKAGE_NAME="ValkyrieOrigins-v1.0.mcaddon"
-# Use absolute path for safety
+# FIX: Versioned filename
+PACKAGE_NAME="ValkyrieOrigins-v1.1.mcaddon"
 PROJECT_DIR="/home/daniel/.openclaw/workspace/ValkyrieOrigins"
 
 echo "Starting package creation for $PACKAGE_NAME..."
 
 # Create a temporary directory to build the package
 BUILD_DIR=$(mktemp -d)
-echo "Build directory: $BUILD_DIR"
 
 # Copy BP and RP into the temporary directory
 cp -r "$PROJECT_DIR/BP" "$BUILD_DIR/"
