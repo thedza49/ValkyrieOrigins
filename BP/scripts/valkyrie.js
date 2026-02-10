@@ -1,9 +1,8 @@
 // Valkyrie Origin Definition
-// This is structured to be read by the main registration script.
 export const valkyrie = {
     // --- Core Identity ---
-    'id': 'valkyrie', // Internal ID
-    'namespace': 'valkyrie_project', // Our new unique namespace
+    'id': 'valkyrie', 
+    'namespace': 'valkyrie_project', 
     'display_name': 'Valkyrie',
     'description': 'A chosen warrior, blessed with flight and human resilience.',
 
@@ -22,20 +21,32 @@ export const valkyrie = {
             type: 'origins:status_effect',
             effect: 'minecraft:mining_fatigue',
             amplifier: 0,
-            duration: -1, // Infinite duration
+            duration: -1, 
             is_ambient: true,
             show_particles: false,
             show_icon: true,
             id: 'valkyrie_slow_mining'
         },
         // Power: Negative trait - Phobia of Caves
-        // This links to the custom script we created
         {
             type: 'origins:custom_tick', 
-            script_path: 'cavePhobiaPower.js', // Path relative to /scripts/
+            script_path: 'cavePhobiaPower.js', 
             tick_function: 'checkCavePhobia',
-            tick_rate: 20, // Run once per second
+            tick_rate: 20, 
             id: 'valkyrie_cave_phobia'
+        },
+        // Power: Valkyrie Leap (Active)
+        // Handled in index.js via jump detection
+        {
+            type: 'origins:active_power',
+            id: 'valkyrie_leap',
+            cooldown: 100 // 5 seconds in ticks (20 ticks per second)
+        },
+        // Power: Valkyrie Glide (Passive)
+        // Handled in index.js
+        {
+            type: 'origins:passive',
+            id: 'valkyrie_glide'
         }
     ],
 

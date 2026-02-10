@@ -3,15 +3,15 @@
     "header": {
         "name": "Valkyrie Origins RP",
         "description": "Resources for the Valkyrie Origin.",
-        "uuid": "86f39ade-e486-48ca-9459-69e05efde87c",
-        "version": [1, 0, 0],
+        "uuid": "43912178-0000-0000-0000-000000000002",
+        "version": [1, 1, 0],
         "min_engine_version": [1, 20, 0]
     },
     "modules": [
         {
             "type": "resources",
-            "uuid": "9c069cad-b8e2-4ae0-ba45-9e14eba89790",
-            "version": [1, 0, 0]
+            "uuid": "43912178-0000-0000-0000-000000000003",
+            "version": [1, 1, 0]
         }
     ]
 }
