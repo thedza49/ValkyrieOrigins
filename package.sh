@@ -2,7 +2,8 @@
 # Package the Valkyrie Origins Add-on
 
 PACKAGE_NAME="ValkyrieOrigins-v1.0.mcaddon"
-PROJECT_DIR="$(dirname \"$0\")"
+# FIX: Use simple path assignment
+PROJECT_DIR=$(dirname "$0") 
 
 echo "Starting package creation for $PACKAGE_NAME..."
 
@@ -14,8 +15,6 @@ cp -r "$PROJECT_DIR/BP" "$BUILD_DIR"
 cp -r "$PROJECT_DIR/RP" "$BUILD_DIR"
 
 # Zip the contents of the temporary directory into the final .mcaddon file
-# The -r flag is recursive, -j excludes directory structure, -m moves files, 
-# but we are using -r and -D to control the output
 cd "$BUILD_DIR" || exit 1
 zip -r -D "$PROJECT_DIR/$PACKAGE_NAME" BP RP
 
