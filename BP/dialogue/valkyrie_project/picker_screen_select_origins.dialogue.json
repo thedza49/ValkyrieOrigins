@@ -1,0 +1,72 @@
+{
+    "dialogue_name": "r4isen1920:originspe/picker_screen_select_origins",
+    "scenes": [
+        {
+            "scene_tag": "select_origins_main",
+            "text": {
+                "rawtext": [
+                    {
+                        "translate": "r4isen1920_originspe.dialogue.select_origins.main"
+                    }
+                ]
+            },
+            "on_open_commands": [
+                "function r4isen1920_originspe/clearchat",
+                "dialogue open @s @s r4isen1920:originspe/picker_screen_select_origins"
+            ],
+            "buttons": [
+                {
+                    "name": {
+                        "rawtext": [
+                            {
+                                "translate": "item.valkyrie_project:valkyrie.name"
+                            }
+                        ]
+                    },
+                    "commands": [
+                        "dialogue open @s @s r4isen1920:originspe/picker_screen_view_origins",
+                        "tag @s add origins:valkyrie"
+                    ]
+                },
+                {
+                    "name": {
+                        "rawtext": [
+                            {
+                                "translate": "item.valkyrie_project:valkyrie.desc"
+                            }
+                        ]
+                    },
+                    "commands": [
+                        "dialogue open @s @s r4isen1920:originspe/picker_screen_view_origins",
+                        "tag @s add origins:valkyrie"
+                    ]
+                },
+                {
+                    "name": {
+                        "rawtext": [
+                            {
+                                "translate": "r4isen1920_originspe.dialogue.options"
+                            }
+                        ]
+                    },
+                    "commands": [
+                        "dialogue open @s @s r4isen1920:originspe/options_screen_main"
+                    ]
+                },
+                {
+                    "name": {
+                        "rawtext": [
+                            {
+                                "text": "Random (WIP)"
+                            }
+                        ]
+                    },
+                    "commands": [
+                        "tellraw @s {\"rawtext\":[{\"text\":\"§r§cRandom origin selection is not available yet.\"}]}",
+                        "dialogue open @s @s r4isen1920:originspe/picker_screen_select_origins"
+                    ]
+                }
+            ]
+        }
+    ]
+}
