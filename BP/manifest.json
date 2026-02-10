@@ -2,22 +2,35 @@
     "format_version": 2,
     "header": {
         "name": "Valkyrie Origins BP",
-        "description": "V1.4 - LOOK UP & JUMP TO FLY. *** MANDATORY: TURN ON BETA APIs IN SETTINGS! ***",
+        "description": "V1.5 - LOOK UP & JUMP TO FLY. Standalone project.",
         "uuid": "43912178-0000-0000-0000-000000000000",
-        "version": [1, 4, 0],
+        "version": [1, 5, 0],
         "min_engine_version": [1, 20, 0]
     },
     "modules": [
         {
+            "description": "Data module",
             "type": "data",
             "uuid": "43912178-0000-0000-0000-000000000001",
-            "version": [1, 4, 0]
+            "version": [1, 5, 0]
+        },
+        {
+            "description": "Script module",
+            "type": "script",
+            "language": "javascript",
+            "entry": "scripts/index.js",
+            "uuid": "43912178-1000-0000-0000-000000000001",
+            "version": [1, 5, 0]
         }
     ],
     "dependencies": [
         {
             "uuid": "43912178-0000-0000-0000-000000000002",
-            "version": [1, 4, 0]
+            "version": [1, 5, 0]
+        },
+        {
+            "module_name": "@minecraft/server",
+            "version": "1.8.0"
         }
     ],
     "capabilities": ["script_v1_beta"]
