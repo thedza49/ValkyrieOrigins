@@ -2,7 +2,7 @@
 # Package the Valkyrie Origins Add-on
 
 PACKAGE_NAME="ValkyrieOrigins-v1.5.mcaddon"
-PROJECT_DIR="/home/daniel/.openclaw/workspace/ValkyrieOrigins"
+PROJECT_DIR=$(pwd)
 
 echo "Starting package creation for $PACKAGE_NAME..."
 

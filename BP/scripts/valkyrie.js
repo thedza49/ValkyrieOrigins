@@ -8,12 +8,12 @@ export const valkyrie = {
 
     // --- Powers ---
     'powers': [
-        // Power: Sets the max health to 20 (10 hearts).
+        // Power: Sets the max health to 24 (12 hearts).
         {
             type: 'origins:attribute',
             attribute: 'minecraft:health',
             operation: 'set',
-            value: 20, 
+            value: 24,
             id: 'valkyrie_health'
         },
         // Power: Negative trait - Mines Slower (Mining Fatigue I)
