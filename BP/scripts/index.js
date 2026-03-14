@@ -22,9 +22,22 @@ system.runInterval(() => {
         const state = getPlayerState(player);
         const onGround = player.isOnGround;
         
+        // 1. CONSTANT POWERS
+        // Health Boost (24 max health = 12 hearts)
+        const healthComponent = player.getComponent("minecraft:health");
+        if (healthComponent && healthComponent.defaultValue !== 24) {
+            healthComponent.defaultValue = 24;
+            healthComponent.resetToDefaultValue();
+        }
+
+        // Mining Fatigue I
+        if (!player.getEffect("mining_fatigue")) {
+            player.addEffect("mining_fatigue", 40, { amplifier: 0, showParticles: false });
+        }
+
         checkCavePhobia(player);
 
-        // 2. LEAP LOGIC (v1.4 LOOK UP & JUMP)
+        // 2. LEAP LOGIC (v1.5 LOOK UP & JUMP)
         // Trigger: Jumping while looking upward (pitch < -40)
         if (player.isJumping && player.getRotation().x < -40 && state.leapCooldown <= 0) {
             const viewDir = player.getViewDirection();
@@ -58,6 +71,6 @@ system.runInterval(() => {
 
 world.afterEvents.playerSpawn.subscribe((event) => {
     const { player } = event;
-    player.sendMessage("§l§c[Valkyrie Origins]§r §7V1.4: Look UP and Jump to Ascend!§r");
+    player.sendMessage("§l§c[Valkyrie Origins]§r §7V1.5: Look UP and Jump to Ascend!§r");
     player.sendMessage("§e(Note: Ensure 'Beta APIs' is ON in world settings)§r");
 });
