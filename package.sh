@@ -1,8 +1,12 @@
 #!/bin/bash
 # Package the Valkyrie Origins Add-on
 
-PACKAGE_NAME="ValkyrieOrigins-v1.5.mcaddon"
 PROJECT_DIR=$(pwd)
+
+echo "Incrementing version..."
+NEW_VERSION=$(python3 increment_version.py)
+
+PACKAGE_NAME="ValkyrieOrigins-v$NEW_VERSION.mcaddon"
 
 echo "Starting package creation for $PACKAGE_NAME..."
 
