@@ -8,9 +8,9 @@ Valkyrie Origins is a custom character class system for Minecraft Bedrock Editio
 - **Custom Powers**: Includes unique mechanics like `cavePhobiaPower.js` and others that define each Origin's gameplay.
 
 ## 📥 How to Access & Install
-The add-on is distributed as a single `.mcaddon` file for easy installation.
+The add-on is distributed via **GitHub Releases** for easy access to the latest and historical versions.
 
-1. **Download the file**: Locate the latest `.mcaddon` file (e.g., `ValkyrieOrigins-v1.6.3.mcaddon`) in the root of this repository.
+1. **Download the latest release**: Go to the [Releases page](https://github.com/thedza49/ValkyrieOrigins/releases) and download the `.mcaddon` file (e.g., `ValkyrieOrigins-v1.6.4.mcaddon`).
 2. **Import to Minecraft**: 
    - **PC/Mobile**: Double-click or tap the file. Minecraft will launch and automatically import the packs.
 3. **World Setup**:
