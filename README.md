@@ -10,7 +10,7 @@ Valkyrie Origins is a custom character class system for Minecraft Bedrock Editio
 ## 📥 How to Access & Install
 The add-on is distributed as a single `.mcaddon` file for easy installation.
 
-1. **Download the file**: Locate `ValkyrieOrigins-v1.5.mcaddon` in the root of this repository.
+1. **Download the file**: Locate the latest `.mcaddon` file (e.g., `ValkyrieOrigins-v1.6.3.mcaddon`) in the root of this repository.
 2. **Import to Minecraft**: 
    - **PC/Mobile**: Double-click or tap the file. Minecraft will launch and automatically import the packs.
 3. **World Setup**:
