@@ -2,12 +2,12 @@
     "format_version": 2,
     "header": {
         "name": "Valkyrie Origins BP",
-        "description": "V1.6.2 - LOOK UP & JUMP TO FLY. Standalone project.",
+        "description": "V1.6.4 - LOOK UP & JUMP TO FLY. Standalone project.",
         "uuid": "6e196749-df08-43ce-8309-19c2d50393e0",
         "version": [
             1,
             6,
-            2
+            4
         ],
         "min_engine_version": [
             1,
@@ -23,7 +23,7 @@
             "version": [
                 1,
                 6,
-                2
+                4
             ]
         },
         {
@@ -35,7 +35,7 @@
             "version": [
                 1,
                 6,
-                2
+                4
             ]
         }
     ],
@@ -45,7 +45,7 @@
             "version": [
                 1,
                 6,
-                2
+                4
             ]
         },
         {
